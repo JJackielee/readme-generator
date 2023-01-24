@@ -75,7 +75,7 @@ ${test}
 //function to add git and email into the question section. takes in data as a parameter
 function gitAndEmail(github,email){
   finalV = finalV + `## Questions
-You can visit the developer Github repository here [${github}](https://${github}.github.io)
+You can visit the developer Github repository here [${github}](https://github.com/${github})
 
 You can also reach the developer for additional questions by emailing: ${email}
 `
