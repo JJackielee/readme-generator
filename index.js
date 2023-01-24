@@ -1,20 +1,13 @@
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
 
-// TODO: Create a function to initialize app
-function init() {}
-
-// Function call to initialize app
-init();
-
-
-
+//uses the generateMarkdown file
+//uses inquierer
+//uses fs to write files
 const generateMarkdown = require('./utils/generateMarkdown.js');
 const inquirer = require('inquirer');
 const fs = require('fs');
 
 
-
+//inqureier to ask users questions in terminal and then puts them into variable so we can pull them in data
 inquirer
 .prompt([
     {
@@ -53,10 +46,21 @@ inquirer
         name: 'license',
         choices: ['MIT','Apache','None'],
       },
+      {
+        type: 'input',
+        message: 'What is your GitHub username?',
+        name: 'github',
+      },
+      {
+        type: 'input',
+        message: 'What is your email address?',
+        name: 'email',
+      },
   ])
   .then((data) => {
-    console.log(generateMarkdown.test);
-
+    //after all questions are asked it then writes the README files and uses the method generateMarkDown 
+    //where we pass in the user inputed data as a parameter so it can return a string with the correct readme in markdown format.
+    //if an error occurs it throws it. 
      fs.writeFile('README.md', generateMarkdown.generateMarkdown(data) , (err) =>
        err ? console.log(err) : console.log('Success!')
      );
