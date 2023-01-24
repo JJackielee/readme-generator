@@ -61,7 +61,7 @@ inquirer
     //after all questions are asked it then writes the README files and uses the method generateMarkDown 
     //where we pass in the user inputed data as a parameter so it can return a string with the correct readme in markdown format.
     //if an error occurs it throws it. 
-     fs.writeFile('README.md', generateMarkdown.generateMarkdown(data) , (err) =>
+     fs.writeFile('./generated/README.md', generateMarkdown.generateMarkdown(data) , (err) =>
        err ? console.log(err) : console.log('Success!')
      );
   });

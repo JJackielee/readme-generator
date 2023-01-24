@@ -4,7 +4,6 @@ let finalV = "";
 //function that render the license badge at the top of the page.
 //checks the data entra with an if statement to determine which badge the user selected
 function renderLicenseBadge(license) {
-  console.log(license);
   if(license == "MIT"){
     finalV = finalV + "![badge](https://img.shields.io/badge/License-MIT-green.svg)"
   } else if(license == "Apache"){
@@ -17,7 +16,6 @@ function renderLicenseBadge(license) {
 //function that adds the description of the project into the read me as well as a table of contents with passed in data in parameters
 
 function descAndTable(desc){
-  console.log(desc);
   finalV = finalV + `
 
 ## Description
@@ -35,7 +33,6 @@ ${desc}
 
 //function that adds installation and usage section into the read me with the passed in data in parameters
 function installationAndUsage(install,use){
-  console.log(install);
   finalV = finalV + `## Installation
 ${install}
 
@@ -51,11 +48,11 @@ function licenseSection(license){
   finalV = finalV + `## License
 `
   if(license == "MIT"){
-    finalV = finalV + `Distributed under the ${license} License. Please refer to [MIT License](https://choosealicense.com/licenses/mit/) for more information
+    finalV = finalV + `Distributed under the ${license} License. Please refer to [MIT License](https://choosealicense.com/licenses/mit/) for more information.
     
 `
   } else if(license == "Apache"){
-    finalV = finalV + `Distributed under the ${license} License. Please refer to [Apache License](https://choosealicense.com/licenses/apache-2.0/) for more information
+    finalV = finalV + `Distributed under the ${license} License. Please refer to [Apache License](https://choosealicense.com/licenses/apache-2.0/) for more information.
     
 `
   } else{
@@ -80,7 +77,7 @@ function gitAndEmail(github,email){
   finalV = finalV + `## Questions
 You can visit the developer Github repository here [${github}](https://${github}.github.io)
 
-You can also reach the developer by emailing: ${email}
+You can also reach the developer for additional questions by emailing: ${email}
 `
 }
 
