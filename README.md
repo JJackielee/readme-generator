@@ -20,7 +20,7 @@ After cloning the files from the repository this application also requires you t
 - read the readme file.
 
 
-[link to walk through video](https://drive.google.com/file/d/1RxBR4ag7XxDdrTIZjxnKtrgs3plema8l/view)
+[link to walk through video](https://drive.google.com/file/d/1Bh_B7DGxJy8eR6vREdW1K1O9YNqODmuW/view)
 
 
 ## Credits
